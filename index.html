@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler Fincas</title>
+</head>
+<body>
+
+    <!-- Titulo -->    
+    <h1 align="center"> ALQUILER DE FINCAS</h1>
+
+    <!-- Se crea la tabla de creacion -->    
+    <table class="table table-hover table-condensed table-bordered" align="center">
+        <thead style="color:#fff;background-color:#337ab7;border-color:#2e6da4">
+            <tr align="center">
+                <td colspan="3" >REGISTROS NUEVOS</td>
+            </tr>
+            <tr align="center">
+                <td><button id="show1">Creación de Fincas</button></td>
+                <td><button id="show2">Registro de Clientes</button></td>
+                <td><button id="show3">Registro de Mensajes</button></td>
+            </tr>
+        </thead>
+    </table>
+
+    <br> 
+
+    <!-- Div que contienen los txt para agregar -->        
+    <div id="creacionFinca" style="display: none;" align="center">         
+        <input type="text" name="txtAddress" id="txtAddress" placeholder="Address">
+        <input type="number" name="txtExension" id="txtExension" placeholder="Exension">
+        <input type="number" name="txtCategory" id="txtCategory" placeholder="Category ID">
+        <input type="text" name="txtName" id="txtName" placeholder="Name">
+        <button onclick="registrarFinca();">Registrar Finca</button>
+    </div>
+
+    <div id="creacionClientes" style="display: none;" align="center">         
+        <input type="text" name="txtNameCli" id="txtNameCli" placeholder="Name">
+        <input type="text" name="txtEmail" id="txtEmail" placeholder="Email">
+        <input type="number" name="txtAge" id="txtAge" placeholder="Age">
+        <button onclick="registrarCliente();">Registrar Cliente</button>
+    </div>
+
+    <div id="registroMensaje"style="display: none;" align="center">        
+        <input type="text" name="txtMessage" id="txtMessage" placeholder="Message">
+        <button onclick="registrarMensaje();">Registrar Mensaje</button>
+    </div>
+    <!--Fin txt para crear -->
+    <br> 
+
+    <!-- Tabla de detalles -->    
+
+    <table class="table table-hover table-condensed table-bordered" align="center">
+        <thead style="color:#fff;background-color:#337ab7;border-color:#2e6da4">
+            <tr align="center">
+                <td colspan="3"> VER DETALLES </td>
+            </tr>
+            <tr align="center">
+                <td><button onclick="detFincas()">Fincas</button></td>
+                <td><button onclick="detClientes()">Clientes</button></td>
+                <td><button onclick="detMensajes()">Mensajes</button></td>
+            </tr>
+        </thead>
+    </table>
+
+    <!-- Se muestran los resultados de los detalles -->    
+    <div id="listado">   
+
+    </div>
+    <br>
+    <div id="editarClientes" style="display: none;" align="center"> 
+        
+        <input type="number" name="txtidClienteU" id="txtidClienteU" placeholder="ID" style="display: none;">
+        <input type="text" name="txtNameCliU" id="txtNameCliU" placeholder="Name">
+        <input type="text" name="txtEmailU" id="txtEmailU" placeholder="Email">
+        <input type="number" name="txtAgeU" id="txtAgeU" placeholder="Age">
+        <button onclick="actualizarCliente();">Guardar</button>
+
+    </div>
+
+    <div id="editarFinca" style="display: none;" align="center"> 
+        
+        <input type="number" name="txtidFincaU" id="txtidFincaU" placeholder="ID" style="display: none;">
+        <input type="text" name="txtAddressU" id="txtAddressU" placeholder="Address">
+        <input type="number" name="txtExensionU" id="txtExensionU" placeholder="Exension">
+        <input type="number" name="txtCategoryU" id="txtCategoryU" placeholder="Category">
+        <input type="text" name="txtNameU" id="txtNameU" placeholder="Name">
+        <button onclick="actualizarFinca();">Guardar</button>
+
+    </div>
+
+    <div id="editarMensaje" style="display: none;" align="center"> 
+        
+        <input type="number" name="txtidFincaU" id="txtidFincaU" placeholder="ID" style="display: none;">
+        <input type="text" name="txtMessageU" id="txtMessageU" placeholder="Message">        
+        <button onclick="actualizarMensaje();">Guardar</button>
+
+    </div>
+
+
+    <!-- Librerias a llamar -->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/funcionFinca.js"></script> 
+    <script type="text/javascript" src="./js/funcionCliente.js"></script>   
+    <script type="text/javascript" src="./js/funcionMensajes.js"></script>   
+    <script type="text/javascript" src="./js/funciones.js"></script>
+
+</body>
+</html>
